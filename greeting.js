@@ -1,9 +1,10 @@
 let greeting;
 
 async function hello() {
-  return (greeting = await new Promise(function (resolve, reject) {
+  greeting = await new Promise(function (resolve, reject) {
     setTimeout(() => resolve("Success!"), 1000); // задача выполнена успешно (через 1 секунду)
-  }));
+  });
+  return greeting;
 }
 
 hello().then(function (result) {
